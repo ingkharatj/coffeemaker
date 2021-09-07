@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="edu.ncsu.csc326.coffeemaker.InventoryTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2021-09-07T23:15:56" hostname="Ings-MacBook-Pro.local" time="0.003">
+  <properties/>
+  <testcase name="milkTest" classname="edu.ncsu.csc326.coffeemaker.InventoryTest" time="0.001"/>
+  <testcase name="addSugar" classname="edu.ncsu.csc326.coffeemaker.InventoryTest" time="0.0"/>
+  <testcase name="addMilk" classname="edu.ncsu.csc326.coffeemaker.InventoryTest" time="0.0"/>
+  <testcase name="addCoffee" classname="edu.ncsu.csc326.coffeemaker.InventoryTest" time="0.0"/>
+  <testcase name="coffeeTest" classname="edu.ncsu.csc326.coffeemaker.InventoryTest" time="0.0"/>
+  <testcase name="sugarTest" classname="edu.ncsu.csc326.coffeemaker.InventoryTest" time="0.0"/>
+  <testcase name="addChocolate" classname="edu.ncsu.csc326.coffeemaker.InventoryTest" time="0.001"/>
+  <testcase name="chocolateTest" classname="edu.ncsu.csc326.coffeemaker.InventoryTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

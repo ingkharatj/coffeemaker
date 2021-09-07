@@ -136,6 +136,9 @@ public class CoffeeMakerTest {
 		assertEquals(25, coffeeMaker.makeCoffee(0, 75));
 	}
 
+	/**
+	 * Test AddRecipe
+	 */
 	@Test
 	public void testAddRecipe() {
 
@@ -152,6 +155,9 @@ public class CoffeeMakerTest {
 
 	}
 
+	/**
+	 * Test DeleteRecipe
+	 */
 	@Test
 	public void testDeleteRecipe() {
 
@@ -169,6 +175,9 @@ public class CoffeeMakerTest {
 
 	}
 
+	/**
+	 * Test EditedRecipe
+	 */
 	@Test
 	public void testEditRecipe() throws RecipeException {
 
@@ -194,6 +203,9 @@ public class CoffeeMakerTest {
 
 	}
 
+	/**
+	 * Test CheckInventory
+	 */
 	@Test
 	public void testCheckInventory() {
 
