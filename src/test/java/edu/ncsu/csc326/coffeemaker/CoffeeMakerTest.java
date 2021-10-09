@@ -18,17 +18,12 @@
  */
 package edu.ncsu.csc326.coffeemaker;
 
-import static org.junit.Assert.assertArrayEquals;
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotEquals;
-import static org.junit.Assert.assertNull;
-import static org.junit.Assert.assertSame;
-
+import edu.ncsu.csc326.coffeemaker.exceptions.InventoryException;
+import edu.ncsu.csc326.coffeemaker.exceptions.RecipeException;
 import org.junit.Before;
 import org.junit.Test;
 
-import edu.ncsu.csc326.coffeemaker.exceptions.InventoryException;
-import edu.ncsu.csc326.coffeemaker.exceptions.RecipeException;
+import static org.junit.Assert.*;
 
 /**
  * Unit tests for CoffeeMaker class.
@@ -167,11 +162,7 @@ public class CoffeeMakerTest {
 		coffeeMaker.deleteRecipe(0);
 		coffeeMaker.deleteRecipe(1);
 
-		String x = coffeeMaker.getRecipes()[0].getName();
-
-		System.out.print(x);
-
-		assertEquals(coffeeMaker.getRecipes()[0].getName(), x);
+		assertNull(coffeeMaker.getRecipes()[0]);
 
 	}
 
@@ -194,7 +185,7 @@ public class CoffeeMakerTest {
 
 		coffeeMaker.editRecipe(0, newRecipe);
 
-		Recipe[] recipes = new Recipe[4];
+		Recipe[] recipes = new Recipe[3];
 
 		recipes[0] = newRecipe;
 
@@ -216,12 +207,6 @@ public class CoffeeMakerTest {
 
 		assertEquals("Coffee: 5\n" + "Milk: 6\n" + "Sugar: 6\n" + "Chocolate: 5\n", coffeeMaker.checkInventory());
 
-	}
-	
-	@Test
-	public void testPurchaseBeverage() {
-
-		
 	}
 
 }
