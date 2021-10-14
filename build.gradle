@@ -12,7 +12,7 @@ apply plugin: 'jacoco'
 
 
 // Make sure we are using Java 8.
-if(JavaVersion.current() != JavaVersion.VERSION_1_8)
+if(JavaVersion.current() < JavaVersion.VERSION_1_8)
     throw new GradleException("This project requires Java 8, but it's running on "+JavaVersion.current())
 
 sourceCompatibility = JavaVersion.VERSION_1_8
@@ -23,7 +23,7 @@ targetCompatibility = JavaVersion.VERSION_1_8
 repositories {
     // Use jcenter for resolving your dependencies.
     // You can declare any Maven/Ivy/file repository here.
-    jcenter()
+
     mavenCentral()
 }
 
@@ -35,8 +35,9 @@ dependencies {
     // Use JUnit test framework
     testImplementation 'junit:junit:4.12'
     testImplementation "org.mockito:mockito-core:3.+"
-    testImplementation 'io.cucumber:cucumber-java8:6.10.4'
+    testImplementation 'io.cucumber:cucumber-java:6.10.4'
     testImplementation 'io.cucumber:cucumber-junit:6.10.4'
+
 
 	// Deprecated.  Use testImplementation.
 //    testCompile 'junit:junit:4.12'
@@ -54,13 +55,9 @@ task cucumber() {
         javaexec {
             main = "io.cucumber.core.cli.Main"
             classpath = configurations.cucumberRuntime + sourceSets.main.output + sourceSets.test.output
-            args = ['--plugin', 'pretty', '--glue', 'demo', 'src/test/resources']
+            args = ['--plugin', 'pretty', '--glue', 'edu.ncsu.csc326.coffeemaker', 'src/test/resources']
             // other args = ['--snippets', 'camelcase']
         }
     }
-}
-
-repositories {
-    mavenCentral()
 }
 

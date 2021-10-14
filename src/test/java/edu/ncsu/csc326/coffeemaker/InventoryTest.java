@@ -222,9 +222,9 @@ public class InventoryTest {
             assertTrue("Units of sugar must be a positive integer", sugar>=0);
 
         }
-//        inventory.addSugar("7");
-//        sugar = inventory.getSugar();
-//        assertEquals(sugar,22);
+        inventory.addSugar("7");
+        sugar = inventory.getSugar();
+        assertEquals(sugar,22);
 
     }
 
